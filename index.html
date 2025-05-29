@@ -7,6 +7,26 @@
     <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;600;700;800&display=swap" rel="stylesheet">
+    
+    <!-- Facebook Pixel Code -->
+    <script>
+        !function(f,b,e,v,n,t,s)
+        {if(f.fbq)return;n=f.fbq=function(){n.callMethod?
+        n.callMethod.apply(n,arguments):n.queue.push(arguments)};
+        if(!f._fbq)f._fbq=n;n.push=n;n.loaded=!0;n.version='2.0';
+        n.queue=[];t=b.createElement(e);t.async=!0;
+        t.src=v;s=b.getElementsByTagName(e)[0];
+        s.parentNode.insertBefore(t,s)}(window, document,'script',
+        'https://connect.facebook.net/en_US/fbevents.js');
+        fbq('init', '494448463689811');
+        fbq('track', 'ViewContent');
+    </script>
+    <noscript>
+        <img height="1" width="1" style="display:none" 
+             src="https://www.facebook.com/tr?id=494448463689811&ev=ViewContent&noscript=1"/>
+    </noscript>
+    <!-- End Facebook Pixel Code -->
+    
     <style>
         body {
             background: #000000;
@@ -17,26 +37,22 @@
             flex-direction: column;
             min-height: 100vh;
         }
-
         body.show-gradient {
             background: linear-gradient(135deg, #8e2de2, #4a00e0, #ff00cc, #f80759);
             background-size: 400% 400%;
             animation: gradient 15s ease infinite;
         }
-
         @keyframes gradient {
             0% { background-position: 0% 50%; }
             50% { background-position: 100% 50%; }
             100% { background-position: 0% 50%; }
         }
-
         .comment-box {
             background-color: rgba(255, 255, 255, 0.9);
             border-radius: 8px;
             box-shadow: 0 1px 2px rgba(0, 0, 0, 0.1);
             font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
         }
-
         .comment-avatar {
             width: 40px;
             height: 40px;
@@ -44,44 +60,36 @@
             object-fit: cover;
             border: 1px solid rgba(0, 0, 0, 0.1);
         }
-
         .comment-author {
             color: #385898;
             font-weight: 600;
         }
-
         .comment-text {
             color: #1c1e21;
             word-wrap: break-word;
         }
-
         .comment-actions {
             color: #65676B;
         }
-
         .comment-action {
             color: #385898;
             font-weight: 600;
             cursor: pointer;
         }
-
         .comment-input {
             background-color: #f0f2f5;
             border-radius: 20px;
             border: none;
         }
-
         .comment-input:focus {
             outline: none;
             background-color: #e4e6eb;
         }
-
         .reply {
             margin-left: 52px;
             border-left: 2px solid #f0f2f5;
             padding-left: 12px;
         }
-
         .video-container {
             position: relative;
             padding-bottom: 75%; /* 4:3 Aspect Ratio */
@@ -93,7 +101,6 @@
             border: 2px solid white;
             background-color: rgba(0, 0, 0, 0.3);
         }
-
         .video-container iframe {
             position: absolute;
             top: 0;
@@ -102,7 +109,6 @@
             height: 100%;
             border-radius: 10px;
         }
-
         .cta-button {
             background: linear-gradient(to right, #ff00cc, #f80759);
             color: white;
@@ -119,12 +125,10 @@
             margin: 20px 0;
             text-align: center;
         }
-
         .cta-button:hover {
             transform: translateY(-3px);
             box-shadow: 0 7px 20px rgba(248, 7, 89, 0.6);
         }
-
         .title {
             color: white;
             font-size: 28px;
@@ -133,7 +137,6 @@
             margin-bottom: 20px;
             font-family: 'Open Sans', sans-serif;
         }
-
         .heart {
             position: fixed;
             pointer-events: none;
@@ -143,11 +146,9 @@
             background: 0;
             display: none;
         }
-
         body.show-gradient .heart {
             display: block;
         }
-
         @keyframes float {
             0% {
                 transform: translateY(0) rotate(0deg);
@@ -160,12 +161,10 @@
                 bottom: 100vh;
             }
         }
-
         .content-wrapper {
             flex: 1;
             padding-bottom: 20px;
         }
-
         .hidden-content {
             display: none;
         }
@@ -191,7 +190,6 @@
             z-index: 5;
             display: none;
         }
-
         .arrow-pointer {
             position: absolute;
             bottom: -30px;
@@ -201,7 +199,6 @@
             animation: bounce 2s infinite;
             z-index: 10;
         }
-
         @keyframes bounce {
             0%, 20%, 50%, 80%, 100% {
                 transform: translateY(0);
@@ -213,7 +210,6 @@
                 transform: translateY(-5px);
             }
         }
-
         @media (max-width: 640px) {
             .reply {
                 margin-left: 20px;
@@ -449,7 +445,7 @@
                 setTimeout(createHeart, i * 500);
             }
         }, 1360000); // 22 minutes and 40 seconds in milliseconds
-
+        
         // New video control functions
         document.addEventListener('DOMContentLoaded', function() {
             // Wait for Wistia to be loaded
@@ -498,6 +494,7 @@
         });
     </script>
     
+    <p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;"></a></p>
     <p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;"></a></p>
 <p style="border-radius: 8px; text-align: center; font-size: 12px; color: #fff; margin-top: 16px;position: fixed; left: 8px; bottom: 8px; z-index: 10; background: rgba(0, 0, 0, 0.8); padding: 4px 8px;"></a></p></body>
 </html>
